@@ -23,7 +23,7 @@
 
 
 <q-dialog v-model="showDetails">
-  <q-card class="bg-primary text-accent q-pa-md">
+  <q-card class="bg-primary text-accent q-pa-md full-width">
   <q-scroll-area style="height:70vh;width:80vw;">
  <div class="text-accent q-pa-md q-mx-auto">
   <span class="text-body2 text-italic q-my-md">
