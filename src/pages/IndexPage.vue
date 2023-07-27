@@ -266,7 +266,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
         <q-item-section avatar>
           <q-icon color="primary" name="star" />
         </q-item-section>
-        <q-item-section>Supabase/Firebsae</q-item-section>
+        <q-item-section>Supabase</q-item-section>
       </q-item>
     </q-list>
   </div>
@@ -394,7 +394,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
 
 
-<div class="row bg-primary q-pa-md q-mx-auto items-center  justify-evenly text-center wrap" style="height:40vh;">
+<div class="row bg-primary q-pa-md q-mx-auto items-center justify-evenly content-center text-center" style="height:40vh;">
 
   <q-btn flat label="Experience"  icon="fa fa-calendar" class="text-accent" size="xl" />
   <q-btn flat label="Awards"  icon="fa fa-award" class="text-accent" size="xl"  />
@@ -536,7 +536,7 @@ const rows = ref([
   {
     title: 'Flight Booking PWA', url: 'https://onqode-booking.netlify.app', features: ['FastApi Backend','JWT Authentication','Sign-up Email verification','Realtime Push Notifications by admin','Booking Management Dashboard','Flight Ticket Download as PDF','Special and Mass email by admin']
   },
-  {title:'VTU Web App',url:'https://mobiledata.comn.ng',features:['Admin Panel to manage products and orders','Purchase airtime, data more','Manage wallet from user dashboard','Email Notification of each purchase','User can optionally print receipts from dshboard as PDF','Notifications']},
+  {title:'VTU Web App',url:'https://mobiledata.com.ng',features:['Admin Panel to manage products and orders','Purchase airtime, data more','Manage wallet from user dashboard','Email Notification of each purchase','User can optionally print receipts from dshboard as PDF','Notifications']},
   {title:'VTU PWA/Mobile App',url:'https://mobiledata.netlify.app',features:['Admin panel to manage products and orders','No registration or Login Required','Apk available at Amazon Appstore','Purchase airtime, data more','Email Notification of each purchase','Notifications']},
   {title:'Ecommerce Store PWA/Mobile App',url:'https://onqode-store.netlify.app',features:['Admin Panel to manage products and orders','User can search for available products','User can add product to cart','User can decrease or increase quantity of products in cart','User can make order and pay for products']},
 ])

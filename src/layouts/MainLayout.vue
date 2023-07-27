@@ -72,8 +72,8 @@
       <router-view />
     </q-page-container>
 
-    <q-footer flat bordered reveal  v-model="footer" class="bg-primary">
-      <div class="row justify-around items-center q-py-md">
+    <q-footer flat bordered reveal  v-model="footer" class="bg-primary" v-if="$q.screen.width>600">
+      <div class="row justify-evenly items-center q-py-md content-center">
              <EssentialLink
           v-for="link in linksList"
           :key="link.title"
