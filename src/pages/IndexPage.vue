@@ -1,10 +1,10 @@
 <!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <template>
 <q-page class="bg-accent " id="home">
-    <div class="column bg-primary q-pa-md" style="min-height:60vh;">
+    <div class="column bg-primary q-pa-md full-screen" style="min-height:60vh;">
 
 
-<div class="row justify-center">
+<div class="row justify-center full-screen">
 
   <div class="column col-12 col-md-8 justify-center">
 <div class="text-grey q-mt-xl text-h5 text-center">Hi</div>
@@ -13,13 +13,18 @@
 
 <div class="text-accent text-h6 text-center">A Full-stack Software Developer</div>
 
-<div class="row q-my-md text-center justify-center">
+<div class="row q-my-md text-center justify-center full-screen">
   <q-btn v-if="!showDetails" color="secondary" flat icon="more" label="Read More About Me" @click="showDetails=true" />
 <q-btn v-if="showDetails" color="secondary" flat icon="password" label="Hide Details" @click="showDetails=false" />
 
 </div>
-<div class="column items-center q-pa-md q-mb-md text-bold text-center" v-if="showDetails">
-<q-scroll-area style="width: 400px; height: 200px;">
+<div class="column col-md-8 col-12 items-center q-pa-md q-mb-md text-bold text-center full-width" v-if="showDetails">
+
+
+
+<q-dialog v-model="showDetails">
+  <q-card class="bg-primary text-accent q-pa-md">
+  <q-scroll-area style="height:70vh;width:80vw;">
  <div class="text-accent q-pa-md q-mx-auto">
   <span class="text-body2 text-italic q-my-md">
 I  bring about a blend of legal expertise and a fervent passion for coding and technology. With a strong background in law and an insatiable penchant for all things tech-related, I have established a reputation for crafting innovative and efficient software solutions.
@@ -73,14 +78,13 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
 </div>
 </q-scroll-area>
+
+  <q-card-actions align="right">
+        <q-btn flat label="close" color="secondary" v-close-popup />
+      </q-card-actions>
+  </q-card>
+</q-dialog>
 </div>
-
-
-
-
-
-
-
 
 
 
@@ -115,7 +119,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
 
 <!-- end of blue or primary background -->
-<div class="text-primary text-h4 text-center q-mt-xl text-underline text-bold">My Tech Skills?</div>
+<div class="text-primary text-h5 text-center q-mt-xl text-underline text-bold">My Tech Skills?</div>
 
 
 <div class="row q-gutter-md q-mt-xl q-pa-md justify-evenly items-center animate__animated animate__pulse animate__slower animate__infinite">
@@ -394,7 +398,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
 
 
-<div  v-if="$q.screen.width>=600"  class="row bg-primary q-pa-md q-mx-auto items-center justify-center content-center text-center" style="height:40vh;">
+<div  v-if="$q.screen.width>=600"  class="row bg-primary q-pa-md q-mx-auto items-center justify-evenly content-center text-center" style="height:40vh;">
 
   <q-btn flat label="Experience"  icon="fa fa-calendar" class="text-accent " size="lg" />
   <q-btn flat label="Awards"  icon="fa fa-award" class="text-accent " size="lg"  />
@@ -418,7 +422,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
 <div id="projects" class="column q-mt-xl q-pa-md q-ma-auto">
 
-  <div class="text-center text-h5 text-bold text-primary">Some Of My Independently Done Projects(both design & code) </div>
+  <div class="text-center text-h5 text-bold text-primary">Some Projects I Did Independently (both design & code) </div>
 
 <q-scroll-area style="max-width:contain;height:400px;">
 
