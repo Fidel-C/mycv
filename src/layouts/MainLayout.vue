@@ -132,7 +132,7 @@ const linksList = ref([
   {
     title: 'Hire Me',
     caption: 'hire me',
-    icon: 'dollar',
+    icon: 'money',
     link: 'contact'
   }
 ])
