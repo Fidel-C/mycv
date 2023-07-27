@@ -194,10 +194,10 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
 
 
-<div class="row q-mt-xl q-pa-md ">
+<div class="row q-mt-xl q-pa-md justify-center">
 
 
-  <div class="column col-6 q-my-lg">
+  <div class="column col-6 q-my-lg" style="max-height:600px;">
 
 
 
@@ -276,9 +276,9 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
 
 
-   <div class="row col-6 q-my-lg q-gutter-sm items-center content-center animate__animated animate__zoomIn animate__slower ">
+   <div class="row col-6 q-my-lg q-gutter-sm items-center content-center animate__animated animate__zoomIn animate__slower "  style="max-height:700px;">
 
-      <q-card class="" flat style="width:100px;height:100px;">
+      <q-card class="" flat style="width:80px;height:80px;">
 
    <div class="q-pa-md q-ma-md">
         <q-icon name="css" size="lg" class="text-primary" />
@@ -287,7 +287,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 </q-card>
 
 
-<q-card flat style="width:100px;height:100px;">
+<q-card flat style="width:80px;height:80px;">
 
      <div class="q-pa-md q-ma-md">
 <q-icon name="html" size="lg" class="text-primary" />
@@ -295,7 +295,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
           </div>
 </q-card>
 
-<q-card flat style="width:100px;height:100px;">
+<q-card flat style="width:80px;height:80px;">
 
      <div class="q-pa-md q-ma-md">
 <q-icon name="php" size="lg" class="text-primary" />
@@ -303,7 +303,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
           </div>
 </q-card>
 
-<q-card flat style="width:100px;height:100px;">
+<q-card flat style="width:80px;height:80px;">
 
      <div class="q-pa-md q-ma-md">
       <q-img
@@ -315,7 +315,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
           </div>
 </q-card>
 
-<q-card flat style="width:100px;height:100px;">
+<q-card flat style="width:80px;height:80px;">
 
      <div class="q-pa-md q-ma-md">
       <q-img
@@ -328,7 +328,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
           </div>
 </q-card>
 
-<q-card flat style="width:100px;height:100px;">
+<q-card flat style="width:80px;height:80px;">
 
      <div class="q-pa-md q-ma-md">
       <q-img
@@ -341,7 +341,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
           </div>
 </q-card>
 
-<q-card flat style="width:100px;height:100px;">
+<q-card flat style="width:80px;height:80px;">
 
      <div class="q-pa-md q-ma-md">
       <q-img
@@ -354,7 +354,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
           </div>
 </q-card>
 
-<q-card flat style="width:100px;height:100px;">
+<q-card flat style="width:80px;height:80px;">
 
        <div class="q-pa-md q-ma-md">
       <q-img
@@ -366,7 +366,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
           </div>
 </q-card>
 
-<q-card flat style="width:100px;height:100px;">
+<q-card flat style="width:80px;height:80px;">
 
      <div class="q-pa-md q-ma-md">
       <q-img
