@@ -32,18 +32,18 @@ I  bring about a blend of legal expertise and a fervent passion for coding and t
   </span>
   </div>
 <div class="column text-accent text-center text-h6">
-  Background, Education and Career :
+  Background, Education and Career
  <span class="text-body2 text-italic q-my-md">Born with a natural gift for problem-solving, I've always possessed a keen interest in both law and technology. Having obtained a degree in Law(LLB), and a BL,  I am now proceeding with a career as a lawyer, specialising in areas where technology and the legal world intersect, such as intellectual property, cybersecurity, etc.
  </span> </div>
 
 <div class="column text-accent text-center text-h6">
-       The Pathway: <span class="text-body2 text-italic q-my-md"> Though without a degree in Computer Science or Engineering , I have found myself drawn to the rapidly evolving world of technology. I began exploring coding and software development as a hobby, dedicating my evenings and weekends to learn programming languages and experimenting with various projects. The more I delved into coding, the more I wanted to.
+       The Path <span class="text-body2 text-italic q-my-md"> Though without a degree in Computer Science or Engineering , I have found myself drawn to the rapidly evolving world of technology. I began exploring coding and software development as a hobby, dedicating my evenings and weekends to learn programming languages and experimenting with various projects. The more I delved into coding, the more I wanted to.
  </span>
 </div>
 
 
 <div class="column text-accent text-center text-h6">
-Professional Expertise:
+Professional Expertise
 
 <span class="text-body2 text-italic q-my-md">
 As a full-stack software developer, I thrive on tackling challenging projects that require a comprehensive understanding of both front-end and back-end development. I excel in designing intuitive user interfaces, crafting scalable backend architectures, and ensuring seamless integration of the various components. My legal expertise allows me to comprehend the legal implications of software solutions, ensuring compliance with regulations and privacy standards.
@@ -53,7 +53,7 @@ As a full-stack software developer, I thrive on tackling challenging projects th
 
 
 <div class="column text-accent text-center text-h6">
-Learning Philosophy:
+Learning Philosophy
 <span class="text-body2 text-italic q-my-md">
   I am a firm believer in lifelong learning and as such, I continuously keep up with the latest trends and advancements in technology. This is realisable by attending tech conferences, participating in hackathons, and contributing to open-source projects, while staying updated with the ever-changing landscape of software development.
 
@@ -62,10 +62,10 @@ Learning Philosophy:
 
 
 <div class="column text-accent text-center text-h6">
-Personal Projects and Hobbies:
+Personal Projects and Hobbies
 
 <span class="text-body2 text-italic q-my-md">
-Outside of the professional sphere, I enjoy working on personal coding projects that address various social and environmental challenges. The idea is to develope applications that promote sustainability, advocate for legal-aid, e-commerce, finetch, and foster learning opportunities in underserved communities. My hobbies are coding, football, gaming, movies, music, etc.
+Outside of the professional sphere, I enjoy working on personal coding projects that address various social and environmental challenges. The idea is to develop applications that promote sustainability, advocate for legal-aid, e-commerce, finetch, and foster learning opportunities in underserved communities. My hobbies are coding, football, gaming, movies, music, etc.
 
 </span>
 
