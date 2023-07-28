@@ -398,18 +398,9 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
 
 
-<div  v-if="$q.screen.width>=600"  class="row bg-primary q-pa-md q-mx-auto items-center justify-evenly content-center text-center" style="height:40vh;">
-
-  <q-btn flat label="Experience"  icon="fa fa-calendar" class="text-accent " size="lg" />
-  <q-btn flat label="Awards"  icon="fa fa-award" class="text-accent " size="lg"  />
-  <q-btn flat label="Projects" @click="scrollToTarget('projects')"  icon="settings" class="text-accent " size="lg"  />
-  <q-btn flat label="Clients"  icon="group" class="text-accent " size="lg"  />
-
-</div>
 
 
-
-<div   v-if="$q.screen.width<600" class="row bg-primary q-pa-md q-mx-auto items-center justify-start  content-center text-center" style="height:40vh;">
+<div   class="row bg-primary q-pa-md q-mx-auto items-center justify-between text-center" style="height:40vh;">
 
   <q-btn flat label="Experience"  icon="fa fa-calendar" class="text-accent " size="lg" />
   <q-btn flat label="Awards"  icon="fa fa-award" class="text-accent " size="lg"  />

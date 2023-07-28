@@ -1,8 +1,8 @@
 {
-  "name": "mycv",
+  "name": "fidelc",
   "version": "0.0.1",
   "description": "A portfolio app",
-  "productName": "mycv",
+  "productName": "Fidel C",
   "author": "fidelc <fidelchukwunyere@gmail.com>",
   "private": true,
   "scripts": {
