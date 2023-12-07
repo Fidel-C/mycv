@@ -235,7 +235,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
         <q-item-section avatar>
           <q-icon color="primary" name="star" />
         </q-item-section>
-        <q-item-section>Typesript</q-item-section>
+        <q-item-section>TypeScript</q-item-section>
       </q-item>
 
         <q-item  >
