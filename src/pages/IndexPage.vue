@@ -538,12 +538,15 @@ const columns = ref([
 
 
 const rows = ref([
+{
+    title: 'School Management System', url: 'https://onqode-school.onrender.com', features: ['Django Backend','Session Authentication','OTP 2Factor Authentication','CSV files to db records','Realtime Notifications','User can manage booking from user dashboard','Srudents can download School Fees Invoice/Receipts','User can optionally mark notification as read','Admin can send special notifivation to user or to all users',]
+  },
   {
     title: 'Flight Booking PWA', url: 'https://onqode-booking.netlify.app', features: ['FastApi Backend','JWT Authentication','Sign-up Email verification','Realtime Push Notifications by admin','User can manage booking from user dashboard','User can download flight Ticket as PDF','User can optionally mark notification as read','Admin can send special email to user or a mass mail to all users',]
   },
   {title:'VTU Web App',url:'https://mobiledata.com.ng',features:['Admin Panel to manage products and orders','Purchase airtime, data and more...','User can manage wallet from user dashboard','Email Notification of each purchase','User can optionally download receipts from dashboard as PDF','Notifications']},
   {title:'VTU PWA/Mobile App',url:'https://mobiledata.netlify.app',features:['Admin panel to manage products and orders','No registration or Login Required','Apk available at Amazon Appstore','Purchase airtime, data more','Email Notification of each purchase','Notifications']},
-  {title:'Ecommerce Store PWA/Mobile App',url:'https://onqode-store.netlify.app',features:['Admin Panel to manage products and orders','User can search for available products','User can add product to cart','User can decrease or increase quantity of products in cart','User can make order and pay for products']},
+  {title:'Ecommerce Store SPA/Mobile App',url:'https://onqode-store.netlify.app',features:['Admin Panel to manage products and orders','User can search for available products','User can add product to cart','User can decrease or increase quantity of products in cart','User can make order and pay for products']},
 ])
 
 
