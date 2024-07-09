@@ -4,7 +4,8 @@
       <q-toolbar class="q-ml-auto">
 
         <q-toolbar-title class="text-primary text-bold">
-          Fidel C<q-icon name="star" class="text-secondary q-my-auto" />
+          Fidel C<q-img :src="'/profile.png'" spinner-color="accent" style="height:30px;width:30px;border-radius: 50%;border-top:5px dotted #F2F4F7;border-bottom:3px dotted #F2F4F7;border-left:2px dotted #E43A19;" />
+
         </q-toolbar-title>
 
 
@@ -72,7 +73,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer flat bordered reveal  v-model="footer" class="bg-primary" v-if="$q.screen.width>=600">
+    <!-- <q-footer flat bordered reveal  v-model="footer" class="bg-primary" v-if="$q.screen.width>=600">
       <div class="row justify-evenly items-center q-py-md content-center">
              <EssentialLink
           v-for="link in linksList"
@@ -89,7 +90,7 @@
 
       </div>
 
-    </q-footer>
+    </q-footer> -->
   </q-layout>
 </template>
 
@@ -156,3 +157,10 @@ function scrollToTarget(id: string) {
 </script>
 
 
+
+<style>
+body{
+  overflow-x:hidden;
+}
+
+</style>

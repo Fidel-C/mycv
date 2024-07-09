@@ -24,7 +24,7 @@
 
 <q-dialog v-model="showDetails">
   <q-card class="bg-primary text-accent q-pa-md full-width">
-  <q-scroll-area style="height:70vh;width:80vw;">
+  <q-scroll-area style="height:70vh;">
  <div class="text-accent q-pa-md q-mx-auto">
   <span class="text-body2 text-italic q-my-md">
 I  bring about a blend of legal expertise and a fervent passion for coding and technology. With a strong background in law and an insatiable penchant for all things tech-related, I have established a reputation for crafting innovative and efficient software solutions.
@@ -180,7 +180,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
      <q-icon name="fa fa-circle-check" class="text-primary text-bold" size="sm" />
 </div>
      <div class="text-primary">
-   Mobile App
+   Mobile Apps
      </div>
 
 
@@ -192,7 +192,23 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
   </q-card>
 
 
+  <q-card class="my-card  q-pa-md" flat>
 
+<q-card-section horizontal class="q-mx-auto" >
+<div class="q-mr-md">
+ <q-icon name="fa fa-circle-check" class="text-secondary text-bold" size="sm" />
+</div>
+ <div class="text-primary">
+Desktop Apps
+ </div>
+
+
+ <div class="q-mr-md">
+ <q-icon name="fa fa-chevron-right" class="text-primary text-bold" size="sm" />
+</div>
+</q-card-section>
+
+</q-card>
 
 </div>
 
@@ -201,7 +217,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 <div class="row q-mt-xl q-pa-md justify-center">
 
 
-  <div class="column col-6 q-my-lg" style="max-height:600px;">
+  <div class="column col-6 q-my-lg" style="max-height:750px;">
 
 
 
@@ -280,7 +296,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
 
 
-   <div class="row col-6 q-my-lg q-gutter-sm items-center content-center animate__animated animate__zoomIn animate__slower "  style="max-height:700px;">
+   <div class="row col-6 q-my-lg q-gutter-sm items-center content-center animate__animated animate__zoomIn animate__slower "  style="max-height:750px;">
 
       <q-card class="" flat style="width:80px;height:80px;">
 
@@ -400,7 +416,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
 
 
-<div   class="row bg-primary q-pa-md q-mx-auto items-center justify-between text-center" style="height:40vh;">
+<div   class="row bg-primary q-pa-md q-mx-auto items-center justify-between text-center" style="height:50vh;">
 
   <q-btn flat label="Experience"  icon="fa fa-calendar" class="text-accent " size="lg" />
   <q-btn flat label="Awards"  icon="fa fa-award" class="text-accent " size="lg"  />
@@ -415,7 +431,7 @@ I am a multifaceted individual whose journey in the legal world and full-stack s
 
   <div class="text-center text-h5 text-bold text-primary">Some Projects I Did Independently (both design & code) </div>
 
-<q-scroll-area style="max-width:contain;height:400px;">
+<q-scroll-area style="height:450px;">
 
 <q-table
   :rows="rows"
