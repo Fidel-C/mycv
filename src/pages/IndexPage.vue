@@ -431,61 +431,61 @@ Desktop Apps
 
   <div class="text-center text-h5 text-bold text-primary">Some Projects I Did Independently (both design & code) </div>
 
-<q-scroll-area style="height:450px;">
-
-<q-table
+  <q-table
+   title="My projects"
   :rows="rows"
-  :columns="columns"
-  row-key="name"
-  class="bg-accent text-primary text-bold"
-  flat
+  :filter="filter"
+  :rows-per-page-options="[12, 15, 20]"
+  :rows-per-page="10"
+  grid
 >
 
-<template #body-cell-url="props">
 
-  <q-td :props="props">
-<a :href="props.row.url" target="_blank" >
-<q-btn color="primary" icon="fa fa-eye" label="View" flat />
-</a>
 
-  </q-td>
+
+
+
+<template #item="project">
+       <q-card data-aos="fade-up"  class="my-card q-ma-md q-mx-auto"  style="height:min-content;width:300px;border-radius:30px;box-shadow: 5px 5px #2F80ED;">
+    <q-img
+    :src="project.row.image"
+    :ratio="16/9"
+    spinner-color="primary"
+    spinner-size="82px"
+    style="width:100%;height:auto;border-top-right-radius:30px;border-top-left-radius:30px;"
+   >
+   <div class="absolute-bottom text-bold text-subtitle1  text-center">
+       {{project.row.title}}
+     </div>
+
+
+  </q-img>
+
+
+
+ <q-card-section horizontal class="row q-pa-sm justify-between items-center">
+
+
+
+
+
+
+ </q-card-section>
+
+
+ <q-card-actions class="row q-mt-auto">
+    <q-btn   no-caps flat  label="View Details" class="text-primary text-center q-mx-auto" @click="handleProjectDetails(project.row)"  />
+ </q-card-actions>
+  </q-card>
 
 
 </template>
 
 
-<template #body-cell-features="props">
-
-  <q-td :props="props">
-    <!-- {{ props.value }} -->
-    <q-expansion-item
-      expand-separator
-      icon="more"
-
-      label="Key Features"
-      :caption="props.row.title"
-      class="text-secondary"
-    >
-    <q-list bordered>
-      <q-item v-for="i in props.value" :key="i" >
-        <q-item-section avatar>
-          <q-icon color="secondary" name="star" />
-        </q-item-section>
-        <q-item-section>{{i}}</q-item-section>
-      </q-item>
-    </q-list>
-
-    </q-expansion-item>
 
 
-  </q-td>
-
-
-</template>
 
 </q-table>
-
-</q-scroll-area>
 
 </div>
 
@@ -530,6 +530,37 @@ Desktop Apps
 
 
 
+<q-dialog v-model="showProjectDetails">
+  <q-card>
+   <div class="q-mx-auto">
+    <q-img
+      :src="projectDetailContent.image"
+      :ratio="16/9"
+      spinner-color="primary"
+      spinner-size="82px"
+    />
+   </div>
+    <div class="text-h6 text-center">{{projectDetailContent.title}}</div>
+
+    <q-card-section class="row items-center">
+      <q-list bordered>
+      <q-item v-for="i in projectDetailContent.features" :key="i" >
+        <q-item-section avatar>
+          <q-icon color="secondary" name="star" />
+        </q-item-section>
+        <q-item-section>{{i}}</q-item-section>
+      </q-item>
+    </q-list>
+    </q-card-section>
+    <q-card-actions align="right">
+      <q-btn flat label="Close" no-caps color="primary" v-close-popup />
+
+      <a v-if="projectDetailContent.url!=''" :href="projectDetailContent.url" target="_blank" >
+<q-btn  color="primary"  icon="fa fa-eye" label="View Demo" flat v-close-popup />
+</a>
+    </q-card-actions>
+  </q-card>
+</q-dialog>
 
 
 
@@ -552,31 +583,131 @@ const columns = ref([
 
 ]);
 
-
 const rows = ref([
-{
-    title: 'School Management System', url: 'https://onqode-school.onrender.com', features: ['Django Backend','Session Authentication','OTP 2Factor Authentication','CSV files to db records','Realtime Notifications','User can manage booking from user dashboard','Srudents can download School Fees Invoice/Receipts','User can optionally mark notification as read','Admin can send special notifivation to user or to all users',]
+
+  {
+    title: 'Real Estate Management App',
+    url: 'https://realestate-mp0n.onrender.com',
+    image:'realestate.png',
+    features: [
+      'Real Estate Listings',
+      '3DView for listiings',
+      'Map View for listing',
+      'Inquiry feature with email',
+      'User authentication and authorization,etc',
+    ],
   },
   {
-    title: 'Flight Booking PWA', url: 'https://onqode-booking.netlify.app', features: ['FastApi Backend','JWT Authentication','Sign-up Email verification','Realtime Push Notifications by admin','User can manage booking from user dashboard','User can download flight Ticket as PDF','User can optionally mark notification as read','Admin can send special email to user or a mass mail to all users',]
+    title: 'School Management System',
+    url: 'https://onqode-school.onrender.com',
+    image:'school-manage.png',
+    features: [
+      'Django Backend',
+      'Session Authentication',
+      'OTP 2Factor Authentication',
+      'CSV files to db records',
+      'Realtime Notifications',
+      'User can manage booking from user dashboard',
+      'Srudents can download School Fees Invoice/Receipts',
+      'User can optionally mark notification as read',
+      'Admin can send special notifivation to user or to all users',
+    ],
   },
-  {title:'VTU Web App',url:'https://mobiledata.com.ng',features:['Admin Panel to manage products and orders','Purchase airtime, data and more...','User can manage wallet from user dashboard','Email Notification of each purchase','User can optionally download receipts from dashboard as PDF','Notifications']},
-  {title:'VTU PWA/Mobile App',url:'https://mobiledata.netlify.app',features:['Admin panel to manage products and orders','No registration or Login Required','Apk available at Amazon Appstore','Purchase airtime, data more','Email Notification of each purchase','Notifications']},
-  {title:'Ecommerce Store PWA/Mobile App',url:'https://onqode-store.netlify.app',features:['Admin Panel to manage products and orders','User can search for available products','User can add product to cart','User can decrease or increase quantity of products in cart','User can make order and pay for products']},
-])
+
+  {
+    title: 'Ecommerce Store PWA/Mobile App',
+    url: 'https://onqode-store.netlify.app',
+    image:'ecommerce.png',
+    features: [
+      'Admin Panel to manage products and orders',
+      'User can search for available products',
+      'User can add product to cart',
+      'User can decrease or increase quantity of products in cart',
+      'User can make order and pay for products',
+    ],
+  },
+   {
+    title: 'Medical Appointment Booking',
+    url: '',
+    image:'medical.png',
+    features: [
+      'Admin Panel to manage appointments, patients and staff',
+      'Separate dashboard for doctors, admins and patients.',
+      'Book or cancel medical appointments easily',
+      'Automated payment integration',
+      'Email Notification of each transaction and booking status',
+
+    ],
+  },
+  {
+    title: 'VTU Web App',
+    url: 'https://mobiledata.com.ng',
+    image:'vtu.jpg',
+    features: [
+      'Admin Panel to manage products and orders',
+      'Purchase airtime, data and more...',
+      'User can manage wallet from user dashboard',
+      'Email Notification of each purchase',
+      'User can optionally download receipts from dashboard as PDF',
+      'Notifications',
+    ],
+  },
+  {
+    title: 'VTU PWA/Mobile App',
+    url: 'https://mobiledata.netlify.app',
+    image:'vtu-mini.png',
+    features: [
+      'Admin panel to manage products and orders',
+      'No registration or Login Required',
+      'Apk available at Amazon Appstore',
+      'Purchase airtime, data more',
+      'Email Notification of each purchase',
+      'Notifications',
+    ],
+  }
+  ,
+  {
+    title: 'Flight Booking PWA',
+    url: 'https://onqode-booking.netlify.app',
+    image:'flight.png',
+    features: [
+      'FastApi Backend',
+      'JWT Authentication',
+      'Sign-up Email verification',
+      'Realtime Push Notifications by admin',
+      'User can manage booking from user dashboard',
+      'User can download flight Ticket as PDF',
+      'User can optionally mark notification as read',
+      'Admin can send special email to user or a mass mail to all users',
+    ],
+  },
+]);
+
+const showDetails = ref(false);
+const showProjectDetails = ref(false);
+const projectDetailContent=ref([])
+
+
+const filter=ref('')
+
+
+const thumbStyle={
+  opacity:'0',
+}
 
 
 
-const showDetails=ref(false)
-
-
-
-
-    function scrollToTarget(id:string){
+function scrollToTarget(id: string) {
   const target = document.getElementById(id);
   if (target) {
-  target.scrollIntoView({behavior:'smooth'})
+    target.scrollIntoView({ behavior: 'smooth' });
   }
+}
+
+
+function handleProjectDetails(details:any){
+  projectDetailContent.value=details
+  showProjectDetails.value=!showProjectDetails.value;
 }
 
 
