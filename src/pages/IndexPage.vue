@@ -1,6 +1,6 @@
 <!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <template>
-<q-page class="bg-accent " id="home">
+<q-page  id="home">
     <div class="column bg-primary q-pa-md full-screen" style="min-height:60vh;">
 
 
@@ -419,9 +419,9 @@ Desktop Apps
 <div   class="row bg-primary q-pa-md q-mx-auto items-center justify-between text-center" style="height:50vh;">
 
   <q-btn flat label="Experience"  icon="fa fa-calendar" class="text-accent " size="lg" />
-  <q-btn flat label="Awards"  icon="fa fa-award" class="text-accent " size="lg"  />
+  <q-btn data-aos="flip-left"  data-aos-duration="1000"  flat label="Awards"  icon="fa fa-award" class="text-accent " size="lg"  />
   <q-btn flat label="Projects" @click="scrollToTarget('projects')"  icon="settings" class="text-accent " size="lg"  />
-  <q-btn flat label="Clients"  icon="group" class="text-accent " size="lg"  />
+  <q-btn data-aos="flip-up"  data-aos-duration="1000"  flat label="Clients"  icon="group" class="text-accent " size="lg"  />
 
 </div>
 
@@ -429,10 +429,10 @@ Desktop Apps
 
 <div id="projects" class="column q-mt-xl q-pa-md q-ma-auto">
 
-  <div class="text-center text-h5 text-bold text-primary">Some Projects I Did Independently (both design & code) </div>
+  <div class="text-center text-h5 text-bold text-primary">Some of My Projects</div>
 
   <q-table
-   title="My projects"
+   title=""
   :rows="rows"
   :filter="filter"
   :rows-per-page-options="[12, 15, 20]"
@@ -446,7 +446,7 @@ Desktop Apps
 
 
 <template #item="project">
-       <q-card data-aos="fade-up"  class="my-card q-ma-md q-mx-auto"  style="height:min-content;width:300px;border-radius:30px;box-shadow: 5px 5px #2F80ED;">
+       <q-card data-aos="slide-up"  data-aos-duration="1000"   class="my-card q-ma-md q-my-xl q-mx-auto"  style="height:min-content;width:300px;border-radius:30px;box-shadow: 5px 5px #111F4D;">
     <q-img
     :src="project.row.image"
     :ratio="16/9"

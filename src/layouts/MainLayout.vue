@@ -1,22 +1,30 @@
 <template>
   <q-layout view="lHh Lpr lFf bg-accent">
-    <q-header flat class="bg-accent">
+    <q-header flat>
       <q-toolbar class="q-ml-auto">
 
-        <q-toolbar-title class="text-primary text-bold">
-          Fidel C<q-img :src="'/profile.png'" spinner-color="accent" style="height:30px;width:30px;border-radius: 50%;border-top:5px dotted #F2F4F7;border-bottom:3px dotted #F2F4F7;border-left:2px dotted #E43A19;" />
+        <q-toolbar-title class=" text-bold">
+          Fidel C<q-img :src="'/profile.png'" spinner-color="accent" style="height:20px;width:20px;border-radius: 50%;border-top:3px dotted #F2F4F7;border-bottom:2px dotted #F2F4F7;border-left:2px dotted #E43A19;" />
 
         </q-toolbar-title>
 
+        <div class="q-ml-auto q-my-auto">
 
+          <q-icon  flat size="xs" name="mdi-brightness-5"  class="text-light"  />
+          <q-icon v-if="isDark" flat size="md" name="mdi-toggle-switch"  class="text-light q-mt-md q-mx-md cursor-pointer" @click="toggleTheme" />
+
+
+<q-icon v-if="!isDark" flat size="md" name="mdi-toggle-switch-off"  class="text-dark q-mt-md q-mx-md cursor-pointer" @click="toggleTheme" />
+<q-icon  flat size="xs" name="mdi-brightness-2"  class="text-dark" />
+</div>
 
          <div class="flex q-mx-md" v-if="$q.screen.width>=600">
 
-           <q-btn flat color="white" text-color="black" label="Home" @click="scrollToTarget('home')" />
+           <q-btn flat color="white"  label="Home" @click="scrollToTarget('home')" />
 
-           <q-btn flat color="white" text-color="black" label="About" @click="scrollToTarget('about')" />
+           <q-btn flat color="white"  label="About" @click="scrollToTarget('about')" />
 
-         <q-btn flat color="white" text-color="black" label="Projects" @click="scrollToTarget('projects')" />
+         <q-btn flat color="white"  label="Projects" @click="scrollToTarget('projects')" />
           <q-btn  outline  text-color="secondary" label="contact me" @click="scrollToTarget('contact')"  />
 
          </div>
@@ -43,7 +51,7 @@
       v-if="$q.screen.width<600"
       :side="'right'"
       :breakpoint="100"
-      class="bg-accent text-primary"
+      class="text-white bg-primary"
       bordered
       overlay
       >
@@ -95,15 +103,19 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { useQuasar } from 'quasar';
+import { ref ,computed,watch} from 'vue';
+import { LocalStorage, useQuasar } from 'quasar';
 import EssentialLink from 'components/EssentialLink.vue';
+import { setInterval } from 'timers';
 
 
 const $q=useQuasar()
 const footer=ref($q.appVisible)
-const linksList = ref([
 
+const isDark=ref(JSON.parse(localStorage.getItem('isDark'))||false)
+
+
+const linksList = ref([
 
 
  {
@@ -147,12 +159,37 @@ function scrollToTarget(id: string) {
 }
 
 
+
  function toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
       }
 
 
 
+
+
+
+function toggleTheme(){
+$q.dark.toggle()
+localStorage.setItem('isDark',JSON.stringify($q.dark.isActive))
+isDark.value=$q.dark.isActive
+
+}
+
+
+function checkActiveTheme(){
+ if(JSON.parse(localStorage.getItem('isDark'))==true){
+  isDark.value==true
+  $q.dark.set(true)
+ }else{
+  isDark.value=false
+  $q.dark.set(false)
+
+ }
+}
+
+
+checkActiveTheme()
 
 </script>
 
