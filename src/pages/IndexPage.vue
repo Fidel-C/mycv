@@ -8,10 +8,10 @@
 
   <div class="column col-12 col-md-8 justify-center">
 <div class="text-grey q-mt-xl text-h5 text-center">Hi</div>
-<div class="text-accent text-h5 q-my-lg text-center" id="about">I am Fidel C.</div>
+<div data-aos="fade-right" data-aos-duration="1000" class="text-accent text-h5 q-my-lg text-center" id="about">I am Fidel C.</div>
     <!-- <q-img :src="'/profile.png'" spinner-color="accent" style="height: 150px; max-width: 150px;border-radius: 50%;" /> -->
 
-<div class="text-accent text-h6 text-center">A Full-stack Software Developer</div>
+<div data-aos="fade-left" data-aos-duration="1000" class="text-accent text-h6 text-center">A Full-stack Software Developer</div>
 
 <div class="row q-my-md text-center justify-center full-screen">
   <q-btn v-if="!showDetails" color="secondary" flat icon="more" label="Read More About Me" @click="showDetails=true" />
