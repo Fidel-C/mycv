@@ -667,6 +667,18 @@ const rows = ref([
   }
   ,
   {
+    title: 'Food Delivery App',
+    url: '',
+    image:'resto.jpeg',
+    features: [
+      'Admin Panel to manage inventory and orders',
+      'Place order on assorted meals easily',
+      'Automated payment integration',
+      'Email Notification of each transaction and order status',
+
+    ],
+  },
+  {
     title: 'Flight Booking PWA',
     url: 'https://onqode-booking.netlify.app',
     image:'flight.png',
