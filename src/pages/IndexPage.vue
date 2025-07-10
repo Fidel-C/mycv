@@ -209,26 +209,441 @@ const floatingIcons = ref([
   { id: 3, name: 'developer_mode', style: 'position: absolute; bottom: 10px; left: 20%; transform: rotate(8deg); animation: float 7s ease-in-out infinite;' }
 ]);
 
+  
+const showProjectDetails = ref(false);
+const projectDetailContent=ref([])
+
+
+const filter=ref('')
+
+
+const thumbStyle={
+  opacity:'0',
+  }
+    
+
 function scrollToTarget(id) {
   const target = document.getElementById(id);
   if (target) target.scrollIntoView({ behavior: 'smooth' });
 }
 
-function handleProjectDetails(row) {
-  alert(`You clicked on: ${row.title}`);
+function handleProjectDetails(details:any){
+  projectDetailContent.value=details
+  showProjectDetails.value=!showProjectDetails.value;
 }
 </script>
 
 <style scoped>
-.floating-icon {
-  opacity: 0.2;
-  z-index: 0;
+/* Modern Portfolio Landing Page CSS */
+
+/* Root Variables for Consistent Theming */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --shadow-light: 0 8px 32px rgba(31, 38, 135, 0.37);
+  --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.1);
+  --animation-speed: 0.3s;
+  --border-radius: 16px;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Animated Background */
+#home {
+  position: relative;
+  overflow: hidden;
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%);
+  animation: backgroundMove 20s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes backgroundMove {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(-20px) translateY(-10px); }
+  50% { transform: translateX(20px) translateY(10px); }
+  75% { transform: translateX(-10px) translateY(20px); }
+}
+
+/* Enhanced Hero Section */
+.bg-primary {
+  background: var(--primary-gradient) !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glassmorphism Cards */
+.my-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  transition: all var(--animation-speed) ease;
+  transform: translateY(0);
+}
+
+.my-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-heavy);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Profile Image with Advanced Styling */
+.q-img {
+  transition: all var(--animation-speed) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.q-img:hover {
+  transform: scale(1.05);
+}
+
+.q-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: 1;
+}
+
+.q-img:hover::before {
+  transform: translateX(100%);
+}
+
+/* Enhanced Buttons */
+.q-btn {
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: none;
+  transition: all var(--animation-speed) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.q-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.q-btn:hover::before {
+  left: 100%;
+}
+
+.q-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Typography */
+.text-h5, .text-h6 {
+  font-weight: 700;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-accent {
+  color: #f5576c !important;
+  text-shadow: 0 2px 8px rgba(245, 87, 108, 0.3);
+}
+
+/* Skills Section Enhancement */
+.q-list .q-item {
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--animation-speed) ease;
+}
+
+.q-list .q-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+}
+
+/* Tech Icons Animation */
+.q-card[style*="width:80px"] {
+  transition: all var(--animation-speed) ease;
+  border-radius: 20px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+.q-card[style*="width:80px"]:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: var(--shadow-light);
+}
+
+/* Project Cards Enhancement */
+.q-card[style*="height:min-content"] {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.q-card[style*="height:min-content"]:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.q-card[style*="height:min-content"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-gradient);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.q-card[style*="height:min-content"]:hover::before {
+  transform: scaleX(1);
+}
+
+/* Dialog Enhancements */
+.q-dialog .q-card {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Scroll Area Styling */
+.q-scroll-area {
+  border-radius: 16px;
+}
+
+/* Contact Icons */
+.q-icon {
+  transition: all var(--animation-speed) ease;
+}
+
+.q-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Social Links */
+a {
+  transition: all var(--animation-speed) ease;
+  display: inline-block;
+}
+
+a:hover {
+  transform: translateY(-3px);
+}
+
+/* Table Enhancements */
+.q-table {
+  background: transparent;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.q-table .q-table__grid-content {
+  gap: 24px;
+}
+
+/* Loading and Spinner Enhancements */
+.q-spinner {
+  filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .my-card {
+    margin: 16px 8px;
+  }
+  
+  .q-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .text-h5 {
+    font-size: 1.8rem;
+  }
+  
+  .text-h6 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Additional Animations */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 @keyframes float {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(10deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate__pulse {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Floating Animation for Tech Icons */
+.animate__zoomIn {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate__zoomIn:nth-child(even) {
+  animation-delay: -3s;
+}
+
+/* Enhanced Hover Effects */
+.q-item-section:hover {
+  color: #667eea;
+  transition: color var(--animation-speed) ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gradient);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-gradient);
+}
+
+/* Focus States */
+.q-btn:focus,
+.q-item:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: white;
+}
+
+/* Loading States */
+.q-img[src*="spinner"] {
+  filter: blur(2px);
+  transition: filter 0.3s ease;
+}
+
+.q-img[src*="spinner"]:hover {
+  filter: blur(0);
+}
+
+/* Enhanced Section Spacing */
+.q-mt-xl {
+  margin-top: 80px !important;
+}
+
+.q-pa-md {
+  padding: 24px !important;
+}
+
+/* Contact Section Enhancement */
+#contact {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 32px 32px 0 0;
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,100 1000,0"/></svg>');
+  background-size: cover;
+  z-index: 1;
+}
+
+#contact > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Performance Optimizations */
+.q-card,
+.q-btn,
+.q-img {
+  will-change: transform;
+}
+
+/* Print Styles */
+@media print {
+  .q-btn,
+  .animate__animated,
+  .q-dialog {
+    display: none !important;
+  }
+  
+  .my-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
 }
 </style>
   
