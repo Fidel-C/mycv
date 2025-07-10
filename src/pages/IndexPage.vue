@@ -641,7 +641,7 @@ const rows = ref([
   },
   {
     title: 'VTU Web App',
-    url: 'https://mobiledata.com.ng',
+    url: 'https://mobiledata.onrender.com',
     image:'vtu.jpg',
     features: [
       'Admin Panel to manage products and orders',
@@ -690,8 +690,8 @@ const rows = ref([
        'Academic games',
        'Ai powdered exams and tests',
        'Passwordless login',
-       'Virtuak Wallet management,
-       'Time based pass management ',
+       'Virtuak Wallet management',
+       'Time based pass management',
        'International payment management',
        'Spreadsheets and Excel Automation, etc'
    },
