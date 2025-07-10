@@ -693,7 +693,7 @@ const rows = ref([
        'Virtuak Wallet management',
        'Time based pass management',
        'International payment management',
-       'Spreadsheets and Excel Automation, etc'
+       'Spreadsheets and Excel Automation, etc']
    },
   
   {
