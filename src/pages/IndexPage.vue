@@ -126,6 +126,19 @@ const projectRows = ref([
     url: 'https://scribekitai.netlify.app',
     features: ['20+ AI Tools', 'Wallet', 'Passwordless Login', 'Document Generation', 'Exams & Games']
   },
+   {
+    title: 'Medical Appointment Booking',
+    url: '',
+    image:'medical.png',
+    features: [
+      'Admin Panel to manage appointments, patients and staff',
+      'Separate dashboard for doctors, admins and patients.',
+      'Book or cancel medical appointments easily',
+      'Automated payment integration',
+      'Email Notification of each transaction and booking status',
+
+    ],
+  },
   {
     title: 'Ecommerce PWA',
     image: 'ecommerce.png',
@@ -138,6 +151,33 @@ const projectRows = ref([
     url: 'https://mobiledata.onrender.com',
     features: ['Airtime & Data Purchase', 'Wallet', 'Email Receipts', 'PDF Downloads']
   },
+  
+  {
+    title: 'Food Delivery App',
+    url: '',
+    image:'resto.jpeg',
+    features: [
+      'Admin Panel to manage inventory and orders',
+      'Place order on assorted meals easily',
+      'Automated payment integration',
+      'Email Notification of each transaction and order status',
+
+    ],
+  },
+    {
+    title: 'VTU PWA/Mobile App',
+    url: 'https://mobiledata.netlify.app',
+    image:'vtu-mini.png',
+    features: [
+      'Admin panel to manage products and orders',
+      'No registration or Login Required',
+      'Apk available at Amazon Appstore',
+      'Purchase airtime, data more',
+      'Email Notification of each purchase',
+      'Notifications',
+    ],
+    }
+  ,
   {
     title: 'Flight Booking PWA',
     image: 'flight.png',
