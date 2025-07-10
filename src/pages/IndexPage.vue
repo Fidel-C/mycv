@@ -678,6 +678,24 @@ const rows = ref([
 
     ],
   },
+   {
+     title:'Scribe Kit Ai',
+    url:'https://scribekitai.netlify.app',
+     image:'scribekitai.jpg',
+     features:[
+       '20+ collection of custom made AI tools',
+       'Payment gateway integration',
+       'Admin Panel',
+       'Document generation',
+       'Academic games',
+       'Ai powdered exams and tests',
+       'Passwordless login',
+       'Virtuak Wallet management,
+       'Time based pass management ',
+       'International payment management',
+       'Spreadsheets and Excel Automation, etc'
+   },
+  
   {
     title: 'Flight Booking PWA',
     url: 'https://onqode-booking.netlify.app',
