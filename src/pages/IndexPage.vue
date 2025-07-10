@@ -706,7 +706,7 @@ const rows = ref([
       'Sign-up Email verification',
       'Realtime Push Notifications by admin',
       'User can manage booking from user dashboard',
-      'User can download flight assTicket as PDF',
+      'User can download flight Ticket as PDF',
       'User can optionally mark notification as read',
       'Admin can send special email to user or a mass mail to all users',
     ],
