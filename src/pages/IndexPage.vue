@@ -1,4 +1,3 @@
-<!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <template>
 <q-page  id="home">
     <div class="column bg-primary q-pa-md full-screen" style="min-height:60vh;">
