@@ -117,7 +117,8 @@
               <span class="skill-tag">TypeScript</span>
               <span class="skill-tag">Vue.js</span>
               <span class="skill-tag">React/Next</span>
- .          span class="skill-tag">Flutter Basics</span>
+              <span class="skill-tag">Kivy & Flet</span>
+          <span class="skill-tag">Flutter Basics</span>
             </div>
           </div>
           
