@@ -8,15 +8,7 @@
 
         </q-toolbar-title>
 
-        <div class="q-ml-auto q-my-auto">
 
-          <q-icon  flat size="xs" name="mdi-brightness-5"  class="text-light"  />
-          <q-icon v-if="isDark" flat size="md" name="mdi-toggle-switch"  class="text-light q-mt-md q-mx-md cursor-pointer" @click="toggleTheme" />
-
-
-<q-icon v-if="!isDark" flat size="md" name="mdi-toggle-switch-off"  class="text-dark q-mt-md q-mx-md cursor-pointer" @click="toggleTheme" />
-<q-icon  flat size="xs" name="mdi-brightness-2"  class="text-dark" />
-</div>
 
          <div class="flex q-mx-md" v-if="$q.screen.width>=600">
 
