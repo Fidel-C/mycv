@@ -116,6 +116,8 @@
               <span class="skill-tag">JavaScript</span>
               <span class="skill-tag">TypeScript</span>
               <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">React/Next</span>
+ .          span class="skill-tag">Flutter Basics</span>
             </div>
           </div>
           
@@ -123,10 +125,12 @@
             <h3>Backend</h3>
             <div class="skill-tags">
               <span class="skill-tag">Python</span>
-              <span class="skill-tag">Django</span>
-              <span class="skill-tag">PHP</span>
-              <span class="skill-tag">Laravel</span>
               <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">Django</span>
+              <span class="skill-tag">Nodejs</span>
+              <span class="skill-tag">Laravel </span>
+             <span class="skill-tag">Java Basics</span>
+              
             </div>
           </div>
           
@@ -342,68 +346,133 @@ const form = ref({
 
 // Featured projects data
 const featuredProjects = ref([
-  {
-    id: 1,
-    title: 'Real Estate Management App',
-    description: 'A comprehensive platform for real estate listings with 3D views and map integration.',
-    url: 'https://realestate-mp0n.onrender.com',
-    image: '/realestate.png',
-    tech: ['Vue.js', 'Laravel', 'PostgreSQL', '3D.js'],
-    features: [
-      'Real Estate Listings',
-      '3D View for listings',
-      'Map View for listing',
-      'Inquiry feature with email',
-      'User authentication and authorization'
-    ]
-  },
-  {
-    id: 2,
-    title: 'School Management System',
-    description: 'Complete school management solution with advanced features and real-time notifications.',
-    url: 'https://onqode-school.onrender.com',
-    image: '/school-manage.png',
-    tech: ['Django', 'Python', 'PostgreSQL', 'WebSocket'],
-    features: [
-      'Django Backend',
-      'Session Authentication',
-      'OTP 2Factor Authentication',
-      'CSV files to db records',
-      'Realtime Notifications',
-      'Fee Management System'
-    ]
-  },
-  {
-    id: 3,
-    title: 'Ecommerce Store PWA',
-    description: 'Modern e-commerce platform with PWA capabilities and mobile-first design.',
-    url: 'https://onqode-store.netlify.app',
-    image: '/ecommerce.png',
-    tech: ['Vue.js', 'PWA', 'Stripe', 'Firebase'],
-    features: [
-      'Admin Panel to manage products and orders',
-      'User can search for available products',
-      'Shopping cart functionality',
-      'Secure payment integration',
-      'Mobile-first design'
-    ]
-  },
-  {
-    id: 4,
-    title: 'Scribe Kit AI',
-    description: 'AI-powered toolkit with 20+ custom tools for document generation and academic assistance.',
-    url: 'https://scribekitai.netlify.app',
-    image: '/scribekitai.jpg',
-    tech: ['Vue.js', 'AI/ML', 'OpenAI API', 'Stripe'],
-    features: [
-      '20+ collection of custom made AI tools',
-      'Payment gateway integration',
-      'Document generation',
-      'Academic games',
-      'AI powered exams and tests',
-      'Virtual Wallet management'
-    ]
-  }
+
+  {
+    title: 'Real Estate Management App',
+    url: 'https://realestate-mp0n.onrender.com',
+    image:'realestate.png',
+    features: [
+      'Real Estate Listings',
+      '3DView for listiings',
+      'Map View for listing',
+      'Inquiry feature with email',
+      'User authentication and authorization,etc',
+    ],
+  },
+  {
+    title: 'School Management System',
+    url: 'https://onqode-school.onrender.com',
+    image:'school-manage.png',
+    features: [
+      'Django Backend',
+      'Session Authentication',
+      'OTP 2Factor Authentication',
+      'CSV files to db records',
+      'Realtime Notifications',
+      'User can manage booking from user dashboard',
+      'Srudents can download School Fees Invoice/Receipts',
+      'User can optionally mark notification as read',
+      'Admin can send special notifivation to user or to all users',
+    ],
+  },
+
+  {
+    title: 'Ecommerce Store PWA/Mobile App',
+    url: 'https://onqode-store.netlify.app',
+    image:'ecommerce.png',
+    features: [
+      'Admin Panel to manage products and orders',
+      'User can search for available products',
+      'User can add product to cart',
+      'User can decrease or increase quantity of products in cart',
+      'User can make order and pay for products',
+    ],
+  },
+   {
+    title: 'Medical Appointment Booking',
+    url: '',
+    image:'medical.png',
+    features: [
+      'Admin Panel to manage appointments, patients and staff',
+      'Separate dashboard for doctors, admins and patients.',
+      'Book or cancel medical appointments easily',
+      'Automated payment integration',
+      'Email Notification of each transaction and booking status',
+
+    ],
+  },
+  {
+    title: 'VTU Web App',
+    url: 'https://mobiledata.onrender.com',
+    image:'vtu.jpg',
+    features: [
+      'Admin Panel to manage products and orders',
+      'Purchase airtime, data and more...',
+      'User can manage wallet from user dashboard',
+      'Email Notification of each purchase',
+      'User can optionally download receipts from dashboard as PDF',
+      'Notifications',
+    ],
+  },
+  {
+    title: 'VTU PWA/Mobile App',
+    url: 'https://mobiledata.netlify.app',
+    image:'vtu-mini.png',
+    features: [
+      'Admin panel to manage products and orders',
+      'No registration or Login Required',
+      'Apk available at Amazon Appstore',
+      'Purchase airtime, data more',
+      'Email Notification of each purchase',
+      'Notifications',
+    ],
+  }
+  ,
+  {
+    title: 'Food Delivery App',
+    url: '',
+    image:'resto.jpeg',
+    features: [
+      'Admin Panel to manage inventory and orders',
+      'Place order on assorted meals easily',
+      'Automated payment integration',
+      'Email Notification of each transaction and order status',
+
+    ],
+  },
+   {
+     title:'Scribe Kit Ai',
+    url:'https://scribekitai.netlify.app',
+     image:'scribekitai.jpg',
+     features:[
+       '20+ collection of custom made AI tools',
+       'Payment gateway integration',
+       'Admin Panel',
+       'Document generation',
+       'Academic games',
+       'Ai powdered exams and tests',
+       'Passwordless login',
+       'Virtual Wallet management',
+       'Time based pass management',
+       'International payment management',
+       'Spreadsheets and Excel Automation, etc']
+   },
+  
+  {
+    title: 'Flight Booking PWA',
+    url: 'https://onqode-booking.netlify.app',
+    image:'flight.png',
+    features: [
+      'FastApi Backend',
+      'JWT Authentication',
+      'Sign-up Email verification',
+      'Realtime Push Notifications by admin',
+      'User can manage booking from user dashboard',
+      'User can download flight Ticket as PDF',
+      'User can optionally mark notification as read',
+      'Admin can send special email to user or a mass mail to all users',
+    ],
+  },
 ])
 
 // Methods
@@ -1326,3 +1395,5 @@ html {
     display: none;
   }
 }
+
+</style>
