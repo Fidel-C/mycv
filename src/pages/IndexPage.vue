@@ -501,10 +501,6 @@ const sendMessage = () => {
   alert('Message sent successfully!')
 }
 
-// Lifecycle
-onMounted(() => {
-  // Add scroll animations or other initialization
-})
 </script>
 
 <style scoped>
