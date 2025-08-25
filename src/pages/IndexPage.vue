@@ -458,6 +458,40 @@ const featuredProjects = ref([
        'International payment management',
        'Spreadsheets and Excel Automation, etc']
    },
+
+    {
+     title:'Quizkid Ai',
+    url:'https://quizkid.netlify.app',
+     image:'quizkid.jpg',
+     features:[
+       'Collection of custom made AI tools for quizzes, exams, interviews and learning.',
+       'Payment gateway integration',
+       'Admin Panel',
+       'Suitable for kids',
+       'Academic games',
+       'Ai powdered exams and tests'
+       'Virtual Wallet management',
+       'Time based pass management',
+       'International payment management',
+ ]
+   },
+
+          {
+     title:'Chatlegal Ai',
+    url:'https://chatlegal.netlify.app',
+     image:'chatlegal.jpg',
+     features:[
+       'Legal Ai Assistant for Lawyers(Hallucination-free)',
+       'Payment gateway integration',
+       'Admin Panel',
+       'Suitable for lawyers and other professionals',
+       'Academic and Legal Research',
+       'Compliance test and fact checking'
+       'Virtual Wallet management',
+       'Time based pass management',
+       'International payment management',
+ ]
+   } ,
   
   {
     title: 'Flight Booking PWA',
