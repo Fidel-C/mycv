@@ -469,7 +469,7 @@ const featuredProjects = ref([
        'Admin Panel',
        'Suitable for kids',
        'Academic games',
-       'Ai powdered exams and tests'
+       'Ai powdered exams and tests',
        'Virtual Wallet management',
        'Time based pass management',
        'International payment management',
@@ -486,7 +486,7 @@ const featuredProjects = ref([
        'Admin Panel',
        'Suitable for lawyers and other professionals',
        'Academic and Legal Research',
-       'Compliance test and fact checking'
+       'Compliance test and fact checking',
        'Virtual Wallet management',
        'Time based pass management',
        'International payment management',
