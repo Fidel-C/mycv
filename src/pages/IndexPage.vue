@@ -402,6 +402,19 @@ const featuredProjects = ref([
 
     ],
   },
+    {
+    title: 'VTU Finetech PWA App',
+    url: 'https://datapay.top',
+    image:'datapay.png',
+    features: [
+      'Admin panel to manage products and orders',
+      'Purchase airtime, data more',
+      'Email Notification of each purchase',
+      'Push Notifications',
+      'receipt printing, etc',
+    ],
+  }
+  ,
   {
     title: 'VTU Web App',
     url: 'https://mobiledata.onrender.com',
